@@ -34,7 +34,8 @@ string add(const string& a, const string& b) {
 
     }
 
-    fsum = to_string(carry) + fsum;
+    if( carry != 0 )
+        fsum = to_string(carry) + fsum;
 
     trim(fsum);
     return fsum;
