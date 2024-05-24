@@ -45,7 +45,7 @@ double f(int n) {
             uint64_t b = y2 - y1;
 
             uint64_t dist = a*a + b*b;
-            dist_min = std::min(dist_min, dist);
+            dist_min = min(dist_min, dist);
 
         }
 
