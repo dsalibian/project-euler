@@ -5,12 +5,8 @@
 using namespace std;
 
 void trim(string& s) {
-    for(int i = 0; i < s.length() - 1; i++) {
-        if( s[i] == '0' )
-            s.erase(i--, 1);
-        else 
-            return;
-    }
+    for( ; s.length() > 1 && s[0] == '0'; )
+        s.erase(0, 1);
 }
 
 string add(const string& a, const string& b) {
