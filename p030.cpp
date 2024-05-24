@@ -21,11 +21,10 @@ int f(int n) {
     int sum = 0;
     
     int u = pow(9, n) * n;
-    for(int i = 2; i <= u; i++) {
+    for(int i = 2; i <= u; i++) 
         if( g(i, n) ) 
             sum += i;
         
-    }
     
     return sum;
 }
