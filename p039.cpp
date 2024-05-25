@@ -17,8 +17,10 @@ int g(int n) {
 int f(int n) {
     int max = 0;
     int maxi = 0;
+
     for(int i = 3; i <= n; i++) {
         int m = g(i);
+        
         if( m > max ) {
             max = m;
             maxi = i;
