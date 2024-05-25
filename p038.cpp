@@ -22,10 +22,9 @@ bool pandigital(int n) {
 
 int g(int n) {
     int max = 0;
-    string s = "";
 
     for(int i = 100; ; i++) {
-        s = "";
+        string s = "";
         for(int j = 1; j <= n; j++)
             s += to_string( i * j );
 
