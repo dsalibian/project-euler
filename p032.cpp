@@ -9,7 +9,7 @@ int len(int n) {
     return log10(n) + 1;
 }
 
-bool p(int a, int b, int c) {
+bool pandigital(int a, int b, int c) {
     uint16_t t = 0;
 
     for( ; a > 0; ) {
@@ -62,7 +62,7 @@ int f() {
             if( l != 9 )
                 continue;
 
-            if( p(i, j, k) ) {
+            if( pandigital(i, j, k) ) {
                 int s = u.size();
                 u.insert(k);
                 
