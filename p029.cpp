@@ -67,21 +67,17 @@ string mult(const string& n, const string& m) {
     return add(arr);
 }
 
-string pow(int a, int b) {
-    string p = "1";
-
-    for(int i = 0; i < b; i++)
-        p = mult(p, to_string(a));
-        
-    return p;
-}
-
 int f(int n) {
     set<string> set;
 
-    for(int i = 2; i <= n; i++) 
-        for(int j = 2; j <= n; j++) 
-            set.insert( pow(i, j) );
+    for(int i = 2; i <= n; i++) {
+        string a = to_string(i);
+        string b = a;
+        for(int j = 0; j + 1 < n; j++) {
+            a = mult(a, b);
+            set.insert(a);
+        }
+    }
 
     return set.size();
 }
