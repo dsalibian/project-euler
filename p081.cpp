@@ -35,7 +35,7 @@ int f() {
     int a_size = a.size();
     int a0_size = a[0].size();
 
-    for(int i = 1; i < a.size(); i++) {
+    for(int i = 1; i < a_size; i++) {
         a[i][0] += a[i-1][0];
         a[0][i] += a[0][i-1];
     }
