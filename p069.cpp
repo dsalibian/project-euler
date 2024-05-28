@@ -1,7 +1,6 @@
 #include <iostream>
 #include <chrono>
 #include <cmath>
-#include <vector>
 
 using namespace std;
 
