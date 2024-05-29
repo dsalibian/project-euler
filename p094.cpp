@@ -9,7 +9,6 @@ struct result {
     bool m_1;
 };
 
-
 result g(uint64_t n) {
     uint64_t n_p1 = n + 1;
     uint64_t t0 = 4 * n * n - n_p1*n_p1;
