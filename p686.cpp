@@ -22,8 +22,8 @@ int f(int L, int n) {
 }
 
 int main() {
-    double L = 123;
-    double n = 678'910;
+    int L = 123;
+    int n = 678'910;
 
     auto start = chrono::steady_clock::now();
     int result = f(L, n);
