@@ -1,5 +1,4 @@
 #include <iostream>
-#include <chrono>
 #include <vector>
 
 using namespace std;
@@ -8,7 +7,6 @@ int f(vector<vector<int>>& arr) {
     for(int i = arr.size() - 1; i > -1; i--) 
         for(int j = 0; j < i; j++)
             arr[i - 1][j] += max(arr[i][j], arr[i][j+1] );
-    
     
     return arr[0][0];
 }
@@ -32,12 +30,7 @@ int main() {
         { 4, 62, 98, 27, 23,  9, 70, 98, 73, 93, 38, 53, 60,  4, 23}
     };
 
-    auto start = chrono::steady_clock::now();
-    int result = f(arr);
-    auto end = chrono::steady_clock::now();
-    
-    cout << result << endl;
-    cout << chrono::duration_cast<chrono::milliseconds>(end - start).count() << "ms" << endl;
+    cout << f(arr) << endl;
 
     return 0;
 }

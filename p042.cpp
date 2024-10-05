@@ -1,5 +1,4 @@
 #include <iostream>
-#include <chrono>
 #include <vector>
 #include <fstream>
 
@@ -57,12 +56,7 @@ int f() {
 }
 
 int main() {
-    auto start = chrono::steady_clock::now();
-    int result = f();
-    auto end = chrono::steady_clock::now();
-    
-    cout << result << endl;
-    cout << chrono::duration_cast<chrono::milliseconds>(end - start).count() << "ms" << endl;
+    cout << f() << endl;
 
     return 0;
 }

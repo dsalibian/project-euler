@@ -1,6 +1,4 @@
 #include <iostream>
-#include <chrono>
-#include <cmath>
 #include <vector>
 
 using namespace std;
@@ -61,10 +59,7 @@ int main() {
     };
     int n = 4;
 
-    auto start = chrono::steady_clock::now();
-    int result = f(a, n);
-    auto end = chrono::steady_clock::now();
-    
-    cout << result << endl;
-    cout << chrono::duration_cast<chrono::milliseconds>(end - start).count() << "ms" << endl;
+    cout << f(a, n) << endl;
+
+    return 0;
 }

@@ -1,8 +1,6 @@
 #include <iostream>
-#include <chrono>
 #include <string>
 #include <vector>
-#include <cmath>
 
 using namespace std;
 
@@ -48,12 +46,8 @@ int main() {
             n += num[i].at(j);
             
     int m = 13;
-
-    auto start = chrono::steady_clock::now();
-    uint64_t result = f(n, m);
-    auto end = chrono::steady_clock::now();
     
-    cout << result << endl;
-    cout << chrono::duration_cast<chrono::milliseconds>(end - start).count() << "ms" << endl;
-}
+    cout << f(n, m) << endl;
 
+    return 0;
+}

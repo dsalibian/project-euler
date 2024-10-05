@@ -8,7 +8,7 @@ using namespace std;
 vector<vector<int>> read() {
     vector<vector<int>> u;
 
-    ifstream in("dat/p081_matrix");
+    ifstream in("dat/p082_matrix");
     string s;
     for( ; getline(in, s); ) {
         istringstream stream(s);
@@ -29,21 +29,22 @@ vector<vector<int>> read() {
     return u;
 }
 
+struct Node{
+    int dist;
+    Node* next[3];
+};
+
 int f() {
-    vector<vector<int>> a = read();
-    int a_size = a.size();
-    int a0_size = a[0].size();
+    vector<vector<int>> u = read();
 
-    for(int i = 1; i < a_size; i++) {
-        a[i][0] += a[i-1][0];
-        a[0][i] += a[0][i-1];
-    }
+    vector<pair<Node, bool>> nodes;
+    
+    for(int i = 0; i < u.size(); i++)
+        for(int j = 0; j < u[i].size(); j++) {
 
-    for(int i = 1; i < a_size; i++) 
-        for(int j = 1; j < a0_size; j++) 
-            a[i][j] += std::min(a[i-1][j], a[i][j-1]);
+        }
 
-    return a[a_size-1][a0_size-1];
+    return 0;
 }
 
 int main() {

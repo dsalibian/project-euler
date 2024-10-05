@@ -1,5 +1,4 @@
 #include <iostream>
-#include <chrono>
 
 using namespace std;
 
@@ -14,10 +13,7 @@ uint64_t f(uint64_t n) {
 int main() {
     uint64_t n = 600'851'475'143ULL;
 
-    auto start = chrono::steady_clock::now();
-    uint64_t result = f(n);
-    auto end = chrono::steady_clock::now();
-    
-    cout << result << endl;
-    cout << chrono::duration_cast<chrono::milliseconds>(end - start).count() << "ms" << endl;
+    cout << f(n) << endl;
+
+    return 0;
 }

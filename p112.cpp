@@ -1,5 +1,4 @@
 #include <iostream>
-#include <chrono>
 
 using namespace std;
 
@@ -42,13 +41,8 @@ int f(double r_max) {
 
 int main() {
     double r = 0.99;
-
-    auto start = chrono::steady_clock::now();
-    int result = f(r);
-    auto end = chrono::steady_clock::now();
     
-    cout << result << endl;
-    cout << chrono::duration_cast<chrono::milliseconds>(end - start).count() << "ms" << endl;
+    cout << f(r) << endl;
 
     return 0;
 }

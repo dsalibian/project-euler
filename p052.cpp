@@ -1,5 +1,4 @@
 #include <iostream>
-#include <chrono>
 
 using namespace std;
 
@@ -25,23 +24,19 @@ bool is_perm(int a, int b) {
 }
 
 int f() {
-    for(int i = 1; ; i++) 
-        if( is_perm(i, 2*i) && 
-            is_perm(i, 2*i) && 
-            is_perm(i, 4*i) && 
-            is_perm(i, 5*i) && 
-            is_perm(i, 6*i) )
+    for(int i = 1;; i++) {
+        for(int j = 1; j < 7; ++j)
+            if( !is_perm(i, j * i) ) 
+                goto cont;
 
-            return i;
+        return i;
+        cont:;
+    }
+
 }
 
 int main() {
-    auto start = chrono::steady_clock::now();
-    int result = f();
-    auto end = chrono::steady_clock::now();
-    
-    cout << result << endl;
-    cout << chrono::duration_cast<chrono::milliseconds>(end - start).count() << "ms" << endl;
+    cout << f() << endl;
 
     return 0;
 }

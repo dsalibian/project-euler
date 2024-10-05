@@ -1,5 +1,4 @@
 #include <iostream>
-#include <chrono>
 #include <iomanip>
 #include <vector>
 #include <cmath>
@@ -55,11 +54,8 @@ double f(int n) {
 
 int main() {
     int n = 2'000'000;
-
-    auto start = chrono::steady_clock::now();
-    double result = f(n);
-    auto end = chrono::steady_clock::now();
     
-    cout << setprecision(11) << result << endl;
-    cout << chrono::duration_cast<chrono::milliseconds>(end - start).count() << "ms" << endl;
+    cout << setprecision(11) << f(n) << endl;
+
+    return 0;
 }

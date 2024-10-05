@@ -1,5 +1,4 @@
 #include <iostream>
-#include <chrono>
 #include <vector>
 #include <string>
 
@@ -131,11 +130,8 @@ int main() {
         "53503534226472524250874054075591789781264330331690"
     };
     int n = 10;
-
-    auto start = chrono::steady_clock::now();
-    string result = f(nums, n);
-    auto end = chrono::steady_clock::now();
     
-    cout << result << endl;
-    cout << chrono::duration_cast<chrono::milliseconds>(end - start).count() << "ms" << endl;
+    cout << f(nums, n) << endl;
+
+    return 0;
 }
